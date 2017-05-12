@@ -1,0 +1,11 @@
+D, [2017-05-12T15:30:50.031880 #49842] DEBUG -- :   [1m[36m (9.2ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "parent_id" integer) [0m
+D, [2017-05-12T15:30:50.071464 #49842] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2017-05-12T15:30:50.075464 #49842] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("name") VALUES (?)[0m  [["name", "Tim"]]
+D, [2017-05-12T15:30:50.076622 #49842] DEBUG -- :   [1m[35m (0.8ms)[0m  commit transaction
+D, [2017-05-12T15:30:50.092876 #49842] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2017-05-12T15:30:50.093892 #49842] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("name", "parent_id") VALUES (?, ?)  [["name", "Wane"], ["parent_id", 1]]
+D, [2017-05-12T15:30:50.095083 #49842] DEBUG -- :   [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+D, [2017-05-12T15:30:50.103520 #49842] DEBUG -- :   [1m[35m (0.2ms)[0m  begin transaction
+D, [2017-05-12T15:30:50.105177 #49842] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("name", "parent_id") VALUES (?, ?)[0m  [["name", "Syd"], ["parent_id", 1]]
+D, [2017-05-12T15:30:50.106773 #49842] DEBUG -- :   [1m[35m (1.0ms)[0m  commit transaction
+D, [2017-05-12T15:30:55.825464 #49842] DEBUG -- :   [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."parent_id" = ?[0m  [["parent_id", 1]]
