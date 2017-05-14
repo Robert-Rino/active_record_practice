@@ -7,7 +7,8 @@ irb(main):001:0> tim = Person.create(name: "Tim")
 irb(main):002:0> wane = Person.create(name: "Wane", parent: tim)
 irb(main):003:0> syd = Person.create(name: "Syd", parent: tim)
 irb(main):004:0> tim.children.map(&:name)
-=> ["Wane", "Syd"]```
+=> ["Wane", "Syd"]
+```
 
 2.And for a more advanced challenge: Update the Person model so that you can also get a list of all of a person’s grandchildren, as illustrated below. Would you need to make any changes to the corresponding table in the database?
 
